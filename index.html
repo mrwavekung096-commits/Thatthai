@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — นายธัชไท รอดประเสริฐ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent:#0b6efd;
+      --muted:#6b7280;
+      --card:#ffffff;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    body {
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      margin:0;
+
+      background:url('1122.jpg') no-repeat center center fixed;
+      background-size:cover;
+      color:#f8fafc;
+      overflow-x:hidden;
+    }
+
+    .container {
+      max-width:1000px;
+      margin:36px auto;
+      padding:24px;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      border-radius:16px;
+      box-shadow:0 6px 24px rgba(0,0,0,0.4);
+    }
+    header {
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    .nav-menu {
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+    }
+    .nav-menu .btn {
+      padding:6px 10px;
+      font-size:0.9rem;
+      background:transparent;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      border-radius:8px;
+      text-decoration:none;
+      cursor:pointer;
+      transition:background 0.3s,color 0.3s;
+    }
+    .nav-menu .btn:hover,
+    .nav-menu .btn.active {
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .avatar {
+      width:120px;
+      height:160px;
+      flex:0 0 120px;
+      border-radius:8px;
+      object-fit:cover;
+      background:linear-gradient(135deg,#e2e8f0,#ffffff);
+      border:1px solid rgba(15,23,42,0.05)
+    }
+    h1 {margin:0;font-size:1.6rem;color:#fff}
+    p.lead {margin:6px 0;color:#cbd5e1}
+    .card {
+      background:rgba(255,255,255,0.15);
+      border-radius:12px;
+      padding:18px;
+      backdrop-filter:blur(6px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.3);
+      margin-top:20px;
+      color:#f1f5f9
+    }
+    .grid {display:grid;grid-template-columns:1fr 320px;gap:20px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr} .avatar{width:100px;height:130px}}
+    .contact-list{list-style:none;padding:0;margin:0}
+    .contact-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.2);color:#e2e8f0}
+    a.external{color:#93c5fd;text-decoration:none}
+    .section-title{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-weight:bold;color:#fff}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#4f46e5;padding:6px 10px;border-radius:999px;font-size:0.9rem;color:#fff}
+    .project{border-left:4px solid rgba(147,197,253,0.4);padding:10px;margin-bottom:12px}
+    footer{margin-top:26px;text-align:center;color:#94a3b8;font-size:0.9rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+
+    .page { display: none; }
+    .page.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images.jpg" alt="Photo ของ นายธัชไท" class="avatar" onerror="this.src='https://via.placeholder.com/120x160?text=Photo'">
+      <div>
+        <h1>Welcome To MyPortfolio</h1>
+        <p class="lead">Portfolio — เกี่ยวกับผม ทักษะ ตัวอย่างผลงาน ข้อมูลการติดต่อ</p>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="btn active" data-page="about">เกี่ยวกับ</button>
+        <button class="btn" data-page="skills">ทักษะ</button>
+        <button class="btn" data-page="projects">ผลงาน</button>
+        <button class="btn" data-page="contact">ติดต่อ</button>
+      </nav>
+    </header>
+
+    <main>
+        <section class="card page active" id="about">
+        <div class="section-title">เกี่ยวกับฉัน</div>
+        <p>สวัสดีครับ ผมนายธัชไท รอดประเสริฐ รหัสนักศึกษา 68319090053 เกิดวันอังคารที่ 25 กันยายน พ.ศ.2550</p>
+        <div class="section-title">ประวัติการศึกษา</div>
+        <p>ประถมศึกษา จบมาจาก โรงเรียนวัดไก่เตี้ย</p>
+        <p>มัธยมต้น จบมาจาก โรงเรียนวินิตศึกษา ในพระราชูปถัมภ์ฯ แห่งที่ 2</p>
+        <p>ระดับ ปวช. จบมาจาก วิทยาลัยเทคนิคลพบุรี สาขา คอมพิวเตอร์กราฟิก</p>
+        <p>ระดับ ปวส. กำลังศึกษาที่ วิทยาลัยเทคนิคลพบุรี สาขา เทคโนโลยีคอมพิวเตอร์</p>
+      </section>
+
+      <section class="card page" id="skills">
+        <div class="section-title">ทักษะ (Skills)</div>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Python</span>
+          <span class="skill">Graphic design</span>
+        </div>
+      </section>
+
+      <section class="card page" id="projects">
+        <div class="section-title">ตัวอย่างผลงาน (Projects)</div>
+        <div class="project">
+          <h4>ว่างงานครับพี่น้อง</h4>
+        </div>
+      </section>
+
+      <section class="card page" id="contact">
+        <div class="section-title">ข้อมูลติดต่อ</div>
+        <ul class="contact-list">
+          <li><strong>ที่อยู่:</strong>82 หมู่ 5 ซอยวัดไก่ 1 ต.ทะเลชุบศร อ.เมือง จ.ลพบุรี 15000</li>
+          <li><strong>โทร:</strong> 099-615-7989</li>
+          <li><strong>E-mail:</strong> <a class="external" href="mailto:mrwavekung096@gmail.com">mrwavekung096@gmail.com</a></li>
+          <li><strong>Facebook:</strong> <a class="external" href="https://www.facebook.com/thatthai.rotprasroed" target="_blank" rel="noopener">thatthai.rotprasroed</a></li>
+        </ul>
+      </section>
+    </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.nav-menu .btn');
+    const pages = document.querySelectorAll('.page');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        buttons.forEach(b => b.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.page).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
